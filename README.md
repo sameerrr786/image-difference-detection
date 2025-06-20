@@ -44,7 +44,7 @@ Below is an example of the app in action. The left image is the original, the mi
 
 <p align="center">
   <img src="samples/original_sample.png" width="30%" alt="Original Sample">
-  <img src="samples/modified_sample" width="30%" alt="Modified Sample">
+  <img src="samples/modified_sample.png" width="30%" alt="Modified Sample">
   <img src="samples/result_sample.jpg" width="30%" alt="Result Sample">
 </p>
 
