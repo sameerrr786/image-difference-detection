@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Detection Result</h1>
+        <p class="text-center text-muted fs-4">{{ changes_detected }} changes were detected.</p>
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header"><h3>Original Image</h3></div>
+                    <div class="card-body">
+                        <img src="{{ original_img }}" class="img-fluid rounded shadow" alt="Original Image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header"><h3>Modified Image</h3></div>
+                    <div class="card-body">
+                        <img src="{{ modified_img }}" class="img-fluid rounded shadow" alt="Modified Image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header"><h3>Detected Changes</h3></div>
+                    <div class="card-body">
+                        <img src="{{ result_img }}" class="img-fluid rounded shadow" alt="Result Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="/" class="btn btn-primary btn-lg">Try Another Comparison</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

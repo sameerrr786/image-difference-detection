@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Difference Detector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-body p-5">
+                <h1 class="card-title text-center mb-4">Image Difference Detector</h1>
+                <p class="card-text text-center text-muted mb-5">
+                    Upload an original and a modified image to see the differences highlighted.
+                </p>
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label for="original" class="form-label fs-5">Original Image</label>
+                            <input type="file" class="form-control form-control-lg" id="original" name="original" required>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="modified" class="form-label fs-5">Modified Image</label>
+                            <input type="file" class="form-control form-control-lg" id="modified" name="modified" required>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Detect Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
